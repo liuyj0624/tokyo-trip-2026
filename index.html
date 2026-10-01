@@ -40,6 +40,12 @@ details:not([open]) > :not(summary){display:none!important}.screen-flow .stop-ti
 .app[data-view="map"] .screen-flow,.app[data-view="shopping"] .screen-flow,.app[data-view="transit"] .screen-flow{scroll-snap-type:none}.app[data-view="itinerary"] .stop-subtitle{font-size:12px!important;line-height:1.65!important}.check-note{font-size:12px}.weather-caption{font-size:11px}.weather-footer .refresh{min-height:44px;min-width:44px}.map-selector .field{font-size:16px;height:44px;min-height:44px}.map-status{font-size:12px}.day-strip{grid-template-columns:repeat(7,minmax(44px,1fr));overflow-x:auto;scrollbar-width:none;padding-bottom:1px}.day-strip::-webkit-scrollbar{display:none}dialog{position:fixed;top:calc(var(--visible-top,0px) + var(--visible-height,100dvh)/2);left:50%;margin:0;transform:translate(-50%,-50%);max-height:calc(var(--visible-height,100dvh) - 20px);overflow-y:auto;scrollbar-width:none}dialog::-webkit-scrollbar{display:none}dialog input,dialog select,dialog textarea{font-size:16px}.check-row input{min-width:24px;min-height:24px}.app[data-view="itinerary"] .flight .action{min-height:44px}.screen-flow .route-detail summary[aria-label="行程備註"][aria-expanded="true"]{background:#d5e5fa}
 
 .day-btn:not(.pre)[aria-pressed=true]{background:#5274a3}
+
+/* Keep the title clear in iOS Home Screen mode and outside the status-bar safe area. */
+.app-header{background:#eef7fc;backdrop-filter:none;-webkit-backdrop-filter:none;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+@media(max-height:650px){.app-header{padding-top:calc(8px + env(safe-area-inset-top,0px))}}
+@media(min-width:700px){.app-header{padding-top:calc(16px + env(safe-area-inset-top,0px))}}
+@media(display-mode:standalone){html,body{background:#eef7fc}.app-header{position:sticky;top:0}}
 </style>
 </head>
 <body>
