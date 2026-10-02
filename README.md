@@ -1,6 +1,6 @@
-# Tokyo Journey — 東京六天五夜
+# Tokyo Journey
 
-手機優先的單頁旅遊 Web App，行程日期為 2026/11/12–11/17。
+手機優先的單頁旅遊 Web App
 
 網址：https://liuyj0624.github.io/tokyo-trip-2026/
 固定一屏的日期、天氣與懸浮選單；所有功能的中間卡片區都可上下滑動，整頁不捲動。交通圖示直接切換至當日對應的交通卡片；回飯店導航在標題旁。導航與交通使用附有輔助標籤的圖示按鈕。購物表單分為兩個步驟。
@@ -17,7 +17,6 @@
 - 交通：原行程路線與估計時間；Google Maps 查詢即時班次。App 內未串接列車即時延誤服務。
 - 購物：新增、編輯、數量、日期、店家、備註、勾選、刪除與短暫復原。
 - localStorage 儲存行前清單、購物與回程起飛時間；可下載 JSON 備份。未提供跨裝置同步或備份匯入功能。同一分頁重新載入時保留所選日期與功能頁。
-- 11/17 可填日本時間的起飛時刻，估算離開飯店／到達機場時間，並提醒最晚 11:00 退房。
 
 Google Maps、天氣及網路字型需要網路；字型載入失敗會使用系統字型。Google Maps 預覽若被瀏覽器擋住，仍可用卡片上的「開啟完整地圖」按鈕。
 
@@ -27,7 +26,6 @@ Google Maps、天氣及網路字型需要網路；字型載入失敗會使用系
 
 ## 資料來源
 
-- 最終行程：https://chatgpt.com/share/6aba7b12-f318-83e8-bc6f-04c1adf26736
 - 天氣：https://open-meteo.com/en/docs
 - 導航：https://developers.google.com/maps/documentation/urls/get-started
 
