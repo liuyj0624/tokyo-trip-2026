@@ -251,13 +251,13 @@ leg('09:00','湯島','明治神宮前〈原宿〉','Yushima Station','Meiji-jing
 leg('13:20','表參道','都廳前','Omote-sando Station','Tochomae Station','銀座線 → 青山一丁目\n轉都營大江戶線 → 都廳前','車程約 15–20 分鐘'),
 leg('16:40','都廳前','東新宿／歌舞伎町','Tochomae Station','Tokyu Kabukicho Tower','都營大江戶線：都廳前 → 東新宿','車程約幾分鐘','東新宿出站後步行約 8–10 分鐘至歌舞伎町核心區。'),
 leg('晚餐後','東新宿','上野御徒町','Higashi-shinjuku Station','Ueno-okachimachi Station','都營大江戶線直達 → 上野御徒町','約 20 分鐘','再步行約 5 分鐘回飯店。') ]},
-{date:'2026-11-16',weekday:'一',area:'豐島園・哈利波特影城',summary:'完整一天留給魔法世界，不安排其他景點。',stops:[
-point('09:00','','飯店 → 豐島園','步行至 JR 御徒町，池袋轉西武線。','Toshimaen Station Seibu','train',{leg:0}),
-point('10:00','17:30','Warner Bros. Studio Tour Tokyo','建議入場 10:00–10:30，選最早可取得的時段。','Warner Bros Studio Tour Tokyo','spark',{pending:'門票待確認',official:'https://www.wbstudiotour.jp/en/',note:'霍格華茲大廳 → 佈景與服裝 → 禁忌森林 → Backlot Cafe 午餐 → 奶油啤酒 → 9¾ 月台 → 斜角巷 → 商店。'}),
-point('18:00','','豐島園 → 上野','原路經池袋回御徒町。','Okachimachi Station','train',{leg:1}),
-point('晚上','','上野晚餐・整理行李','飯店附近簡單吃，回房整理明天的行李。',HOTEL,'hotel')],legs:[
-leg('09:00','御徒町','豐島園','Okachimachi Station','Warner Bros Studio Tour Tokyo','JR 山手線：御徒町 → 池袋（約 20 分鐘）\n轉西武池袋線／豐島線 → 豐島園（約 15–20 分鐘）','全程約 50–60 分鐘','部分班次需在練馬換車，現場跟著「豊島園」方向。'),
-leg('18:00','豐島園','御徒町','Toshimaen Station Seibu','Okachimachi Station','西武線 → 池袋\n轉 JR 山手線 → 御徒町','約 45–55 分鐘') ]},
+{date:'2026-11-16',weekday:'一',area:'舞濱・東京迪士尼樂園',summary:'07:00 飯店出發；整天東京迪士尼樂園，餐食與休息在園區安排。',stops:[
+point('07:00','08:15','飯店 → 東京迪士尼樂園','07:00 從飯店出門，約 08:15 抵達園區並預留安檢排隊。','Tokyo Disneyland','train',{leg:0,coords:[35.6329,139.8804],note:'先準備早餐，步行至 JR 御徒町 → 東京站 → 舞濱站 → 步行至樂園。東京站轉京葉線走路距離較長，預留約 15–20 分鐘；全程約 60–75 分鐘為估計，出發前查當天班次。'}),
+point('09:00','21:00','東京迪士尼樂園 Tokyo Disneyland','遊樂設施、遊行與角色商品；午晚餐及休息安排在園區。','Tokyo Disneyland','spark',{coords:[35.6329,139.8804],pending:'樂園門票待確認',official:'https://www.tokyodisneyresort.jp/en/tdl/',note:'11/16 官方目前公告 09:00–21:00，時間可能調整，出發前再看官方日曆。購買 11/16 東京迪士尼樂園指定日期門票，勿選海洋；安裝 Tokyo Disney Resort App 並連結門票。遊行、表演與設施營運以當天 App 為準；午晚餐彈性安排，留時間休息。官方日曆：https://www.tokyodisneyresort.jp/en/tdl/monthly/calendar/202611/'}),
+point('21:15','22:30','東京迪士尼樂園 → 上野','離園後步行至舞濱，經東京站返回御徒町。','Okachimachi Station','train',{leg:1,coords:[35.7075,139.7748],note:'預留散場人潮與東京站轉乘時間；班次與抵達時間為估計，請查即時交通。疲累時可以提早離園。'}),
+point('22:30','','回飯店・整理行李','從御徒町步行回飯店，整理隔天回程行李。',HOTEL,'hotel')],legs:[
+leg('07:00–08:15','上野／御徒町','東京迪士尼樂園',HOTEL,'Tokyo Disneyland','JR 山手線／京濱東北線：御徒町 → 東京\n轉 JR 京葉線／武藏野線 → 舞濱；步行至樂園','全程約 60–75 分鐘（含步行及轉乘，估計）','07:00 飯店出發。東京站轉京葉線預留約 15–20 分鐘，約 08:15 抵達後安檢排隊。'),
+leg('21:15–22:30','東京迪士尼樂園','御徒町','Tokyo Disneyland','Okachimachi Station','JR 京葉線／武藏野線：舞濱 → 東京\n轉 JR 山手線／京濱東北線 → 御徒町','全程約 60–75 分鐘（估計）','先步行至舞濱站。散場可能較擁擠；轉乘與末班車請依當天即時查詢。') ]},
 {date:'2026-11-17',weekday:'二',area:'上野 → 成田機場',summary:'不排景點，留足時間退房與搭機。',stops:[
 point('待補','','飯店退房','最晚 11:00；實際離開時間依回程航班安排。',HOTEL,'hotel'),
 point('待補','','京成上野 → 成田機場','Skyliner 直達，指定席另買車票。','Narita International Airport','train',{leg:0}),
@@ -268,7 +268,7 @@ const CHECKLIST=[
 {id:'insurance',name:'旅遊保險',note:'確認保障期間涵蓋 11/12–11/17。'},
 {id:'internet',name:'網卡／eSIM',note:'出發前完成購買與設定。'},
 {id:'ic',name:'Suica／PASMO',note:'市區交通使用 IC 卡；Skyliner 另買指定席票。'},
-{id:'harry',name:'哈利波特影城門票',note:'11/16 · 建議 10:00–10:30 入場。',url:'https://www.wbstudiotour.jp/en/'},
+{id:'disney',name:'東京迪士尼樂園門票與官方 App',note:'11/16 · 購買樂園指定日期票（非海洋），安裝官方 App 並連結門票；07:00 飯店出發。',url:'https://www.tokyodisneyresort.jp/en/ticket/'},
 {id:'kochikame',name:'こち亀記念館預約',note:'11/14 · 建議 10:30 入場。',url:'https://www2.city.katsushika.lg.jp/institution/1030225/1030227/1037739.html'},
 {id:'taishoen',name:'太昌園本店訂位',note:'11/14 · 建議 18:30、3 位。',url:'https://booking.ebica.jp/webrsv/search/e014114901/29047?isfixshop=true'},
 {id:'sky',name:'SHIBUYA SKY 門票',note:'11/13 · 建議 15:30；出發前確認官方售票日程。',url:'https://www.shibuya-scramble-square.com/sky/ticket/'},
@@ -426,8 +426,8 @@ const PIN_COORDS={
  'Tokyu Plaza Harajuku Harakado':[35.6684,139.7063],'Tonkatsu Maisen Aoyama Honten':[35.667,139.7117],
  'Tochomae Station':[35.6909,139.6926],'Tokyo Metropolitan Government Building Observatory':[35.6896,139.6917],
  'Shinjuku Station West Exit':[35.691,139.6994],'Higashi-shinjuku Station':[35.6979,139.7075],
- 'Tokyu Kabukicho Tower':[35.6954,139.7009],'Toshimaen Station Seibu':[35.742,139.649],
- 'Warner Bros Studio Tour Tokyo':[35.7453,139.6508],'Okachimachi Station':[35.7075,139.7748]
+ 'Tokyu Kabukicho Tower':[35.6954,139.7009],'Maihama Station':[35.6362,139.8837],
+ 'Tokyo Disneyland':[35.6329,139.8804],'Okachimachi Station':[35.7075,139.7748]
 };
 let mapMode='overview',overviewMap=null;
 const onePointMap=renderMap;
