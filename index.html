@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-20261015.png">
-<link rel="icon" type="image/png" sizes="192x192" href="./icon-192-20261015.png">
-<link rel="manifest" href="./site-20261015.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-blue-20261015.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192-blue-20261015.png">
+<link rel="manifest" href="./site-blue-20261015.webmanifest">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
@@ -120,7 +120,10 @@ details:not([open]) > :not(summary){display:none!important}.screen-flow .stop-ti
 .app .trip-nav{grid-template-columns:repeat(5,minmax(0,1fr))}.ticket-toolbar{margin:0 2px 8px;min-height:44px}.ticket-privacy{display:flex;align-items:center;gap:7px;margin:0 2px 10px}.ticket-privacy svg{width:17px;height:17px}.ticket-card-heading{display:flex;align-items:center;gap:12px}.ticket-card-heading>div{min-width:0;flex:1}.ticket-card-heading h3{margin:0;font-size:16px;line-height:1.5}.ticket-card-heading .stop-icon{flex:none;width:36px;height:36px;border-radius:13px}.ticket-card .ticket-meta{margin:2px 0 0;font-size:12px}.ticket-card .ticket-note{white-space:pre-wrap}.ticket-card .ticket-code{font-size:12px;margin:9px 0}.ticket-card .danger{color:#9c463a;background:#fff0ed;border-color:#f1d8d2}.ticket-card .actions{gap:8px}.ticket-card .action{font-size:12px}.app[data-view=tickets] .day-meta{display:none}
 
 .app #overview-map{height:clamp(150px,26dvh,220px);min-height:150px;width:calc(100% - 28px);margin:0 auto}.app .map-shell{padding:10px 14px}.app .map-frame{height:clamp(140px,24dvh,200px);width:calc(100% - 8px);margin:0 auto}
-.check-toggle{display:grid;place-items:center;min-width:44px;min-height:44px;cursor:pointer;flex:none}.check-toggle input{margin:0;width:24px;height:24px;cursor:pointer}.check-row:has(.check-toggle){gap:8px}.app[data-view="tickets"] .screen-flow,.app[data-view="itinerary"] .screen-flow:has(.check-toggle){scroll-snap-type:none}</style>
+.check-toggle{display:grid;place-items:center;min-width:44px;min-height:44px;cursor:pointer;flex:none}.check-toggle input{margin:0;width:24px;height:24px;cursor:pointer}.check-row:has(.check-toggle){gap:8px}.app[data-view="tickets"] .screen-flow,.app[data-view="itinerary"] .screen-flow:has(.check-toggle){scroll-snap-type:none}
+/* Compact, border-free Fuji illustration beside the title. */
+.brand-name>.brand-fuji{display:block;width:32px;height:26px;flex:none;stroke:none;fill:none;overflow:visible}.brand-fuji path{stroke:none}@media(max-width:360px){.brand-name>.brand-fuji{display:block;width:24px;height:22px}.brand-name{gap:4px}}
+</style>
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
@@ -152,7 +155,7 @@ details:not([open]) > :not(summary){display:none!important}.screen-flow .stop-ti
 </defs></svg>
 <div class="app">
 <div class="scenery" aria-hidden="true"><svg viewBox="0 0 560 650" preserveAspectRatio="xMidYMax slice"><defs><linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#c5e2f1"/><stop offset="1" stop-color="#438eb9"/></linearGradient></defs><path fill="url(#mountain)" d="M-50 650 85 525 175 440 239 349 275 331 292 323 316 332 348 376 413 470 510 550 620 650Z"/><path fill="#f4f9fc" d="m175 440 64-91 36-18 17-8 24 9 32 44 52 74-56-18-21-42-6 69-25-84-32 36-12-20-21 36-12-13-21 40-18-4Z"/><path fill="#d8ebf6" d="m286 335-38 128-12 45-36 65 28-103 34-74ZM310 345l31 110 21 82-45-106-19-69Z"/><path fill="#6caaca" opacity=".7" d="m0 620 99-56 88 24 75 46 110-37 91-25 97 38v60H0Z"/></svg></div>
-<header class="app-header"><div class="brand"><div class="brand-name"><h1>Tokyo Journey</h1><svg aria-hidden="true"><use href="#i-spark"/></svg></div><div class="header-sticker"><img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXU1a2puYWg2OWZhODdwZGxscngybGdhazR6YmRmMzR5cHdudm9icCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/zPj0uudmLSYZhABim2/giphy.gif" alt="Dinotaeng Quokka 動態貼圖" width="100" height="60" decoding="async"></div></div><div id="day-strip" class="day-strip" aria-label="行程日期"></div><div class="account-strip"><button id="account-button" type="button">連線中</button></div></header>
+<header class="app-header"><div class="brand"><div class="brand-name"><h1>Tokyo Journey</h1><svg class="brand-fuji" viewBox="0 0 64 48" aria-hidden="true" focusable="false"><path fill="#d2e8fa" d="M48 12c-1-6 7-8 9-3 6-2 10 6 4 8H46c-5-1-3-6 2-5Z"/><path fill="#80c1ed" d="M3 42 24 8c1-2 3-2 4-1l4 1 4-1c2-1 3 0 4 2l21 33c1 2 0 3-2 3H5c-3 0-4-1-2-3Z"/><path fill="#a7d9f6" d="M6 41 25 10l7 8-13 25Z"/><path fill="#5fa8e5" d="m32 17 7-6 21 31c1 2 0 3-2 3H39Z"/><path fill="#f8fcff" d="m18 18 6-10c1-2 3-2 4-1l4 1 4-1c2-1 3 0 4 2l6 10-8-4-4 5-4-5-4 5-3-5Z"/><path fill="#c8e8f9" d="m27 21 3-6 4 5-3 10Z"/></svg></div><div class="header-sticker"><img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXU1a2puYWg2OWZhODdwZGxscngybGdhazR6YmRmMzR5cHdudm9icCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/zPj0uudmLSYZhABim2/giphy.gif" alt="Dinotaeng Quokka 動態貼圖" width="100" height="60" decoding="async"></div></div><div id="day-strip" class="day-strip" aria-label="行程日期"></div><div class="account-strip"><button id="account-button" type="button">連線中</button></div></header>
 <main id="main" class="page">
 
 <div class="section-head"><h2 id="page-heading">行程安排</h2><button id="weather" class="weather weather-chip" type="button" aria-label="查看東京天氣資訊" aria-haspopup="dialog"><span id="weather-symbol" class="weather-symbol"></span><span class="weather-chip-copy"><span id="weather-value" class="weather-value">— °C</span><span id="weather-brief" class="weather-brief">更新中</span></span></button><a class="action heading-hotel" href="https://www.google.com/maps/dir/?api=1&amp;destination=%26Here%20TOKYO%20UENO%202-11-18" target="_blank" rel="noopener noreferrer" aria-label="回飯店導航" title="回飯店導航"><svg aria-hidden="true"><use href="#i-hotel"/></svg></a></div>
