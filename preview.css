@@ -1,0 +1,89 @@
+/* Preview layout: preserve the original date-button heights and shared data. */
+.app {height:100dvh; min-height:0; margin:0 auto; border-radius:0; --nav-clearance:12px;}
+.app .app-header {padding:calc(8px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 6px max(16px,env(safe-area-inset-left,0px)); border-radius:0 0 22px 22px;}
+.app .brand {min-height:44px; gap:8px;}
+.app .brand-name {min-width:0; gap:5px;}
+.app .brand h1 {font-size:clamp(18px,5vw,23px); letter-spacing:.4px; white-space:normal; line-height:1.2;}
+.app .brand-name>.brand-fuji {width:25px; height:23px;}
+.app .header-sticker {width:36px; height:36px; margin-left:auto;}
+.app #account-button {flex:none; min-width:48px; min-height:44px; max-width:104px; padding:6px 8px; border-radius:12px; background:#e2edf9; color:#34577e; font-size:14px; line-height:1.35;}
+.app .day-strip {display:flex; margin-top:4px; gap:6px; padding:0 0 1px;}
+.app .day-btn {flex:1 0 auto; min-width:44px; min-height:50px; padding-inline:6px;}
+.app .day-btn>span {font-size:10px; line-height:1.2; white-space:nowrap;}
+.app .day-btn b {font-size:22px;}
+.app .day-btn.pre b {font-size:11px;}
+.app .page {padding:6px max(12px,env(safe-area-inset-right,0px)) 0 max(12px,env(safe-area-inset-left,0px)); gap:6px;}
+.app .section-head {gap:8px;grid-template-columns:minmax(100px,1fr) minmax(0,1.9fr) 48px;align-items:stretch;}
+.app .section-head h2,.app .section-head .weather-chip,.app .section-head .heading-hotel{height:auto;min-height:48px;}
+.app .section-head h2{white-space:normal;overflow-wrap:anywhere;word-break:keep-all;}
+.app .weather-chip .weather-value{white-space:normal;overflow-wrap:anywhere;}
+.trip-workspace {display:grid; grid-template-columns:minmax(0,1fr); flex:1; min-height:0; min-width:0; gap:16px;}
+.trip-workspace>.screen-window {min-width:0; min-height:0;}
+.app[data-view] .screen-flow {padding:2px 1px 12px; scroll-padding:8px 0 12px; scroll-snap-type:none;}
+.app .trip-nav {position:relative; flex:none; left:auto; bottom:auto; transform:none; margin:0 auto; width:100%; padding:4px max(12px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px)); border-radius:20px 20px 0 0;}
+.app .trip-nav button {min-height:48px; padding:2px; gap:3px; font-size:12px;}
+.app .trip-nav svg {width:21px; height:21px;}
+.app[data-view] .screen-flow>.summary-card {display:grid; grid-template-columns:minmax(56px,max-content) minmax(0,1fr) 44px; gap:0 10px; padding:8px 12px; margin:0 0 6px; border-radius:18px; background:#f8fbfff7; color:var(--ink);}
+.summary-card.is-selected {box-shadow:inset 0 0 0 2px #5274a3;}
+.summary-card .compact-time {grid-column:1; grid-row:1; align-self:start;}
+.app .summary-card .time-edit {width:max-content; min-width:56px; min-height:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:14px; line-height:1.4; margin:0; padding:3px 4px; color:#355b88; background:#e8f1fc; border:0; border-radius:10px; white-space:nowrap;}
+.app .summary-card .time-edit .stop-end {font-size:12px; color:#4c6480; white-space:nowrap;}
+.summary-toggle {grid-column:2; grid-row:1; min-width:0; min-height:48px; padding:0; background:transparent; color:inherit; text-align:left;}
+.app .summary-card .stop-title {display:block; font-size:16px; line-height:1.5; margin:0; padding:0; overflow-wrap:anywhere; font-weight:700;}
+.summary-card .summary-nav {grid-column:3; grid-row:1; width:44px; height:48px; min-height:48px; padding:0; margin:0; align-self:start;}
+.summary-status {grid-column:2 / -1; min-width:0; margin-top:3px;}
+.summary-status:empty {display:none;}
+.summary-status .badge {font-size:13px; margin:0 0 4px; padding:4px 7px;}
+.summary-status p {font-size:14px!important; line-height:1.6!important; margin:2px 0!important; color:#6c4c2c!important; white-space:pre-wrap;}
+.summary-panel {grid-column:1 / -1; border-top:1px solid #dce7f1; padding-top:8px; margin-top:8px; min-width:0;}
+.app .summary-panel p {font-size:16px; line-height:1.7; margin:0 0 8px; white-space:pre-wrap;}
+.summary-panel .actions {margin-top:8px; gap:8px;}
+.summary-panel .action {font-size:14px; min-height:44px;}
+.summary-card .stop-manage {position:static; width:auto; min-width:44px; font-size:14px; background:#e8f1fc; padding:6px 10px;}
+.side-map {display:none; min-width:0; min-height:0; background:#f5faff; border:1px solid #e4eff8; border-radius:20px; overflow:hidden;}
+.side-map-heading {display:flex; align-items:center; justify-content:space-between; padding:10px 12px; gap:8px;}
+.side-map-heading h2 {margin:0; font-size:17px;}
+.side-map-heading button {min-height:44px; padding:7px 10px; border-radius:12px; background:#e5effa; color:#355b88; font-size:14px;}
+#side-map-canvas {flex:1; min-height:140px; z-index:0; background:#e5eef3;}
+.side-map-selection {display:flex; gap:8px; align-items:center; padding:8px 12px; min-height:60px;}
+.side-map-selection p {flex:1; min-width:0; font-size:14px; line-height:1.5; margin:0; overflow-wrap:anywhere;}
+.side-map-selection a {flex:none; min-height:44px; min-width:44px; display:grid; place-items:center; background:#e5effa; border-radius:12px;}
+.side-map-note {margin:0; padding:0 12px 10px; font-size:12px; line-height:1.5; color:#536a82;}
+.side-marker {background:#5274a3; color:white; border:2px solid white; border-radius:50%; display:grid; place-items:center; font-size:13px; font-weight:700; box-shadow:0 2px 6px #24476a55;}
+.side-marker.selected {background:#163b70; border:3px solid #ffd992;}
+.side-map .leaflet-control-zoom a {min-width:44px; min-height:44px; line-height:44px;}
+.side-map .leaflet-overlay-pane svg {width:revert; height:revert;}
+.side-map .leaflet-attribution-flag {display:none!important;}
+@media(max-height:650px){.app .day-btn{min-height:46px;}}
+@media(max-height:500px) and (orientation:landscape){.app .day-btn{min-height:44px;}}
+@media(max-height:599px){
+ .app .app-header{padding-top:calc(4px + env(safe-area-inset-top,0px)); padding-bottom:3px;}
+ .app .header-sticker{display:none;}
+ .app #account-button{margin-left:auto;}
+ .app .page{padding-top:4px; gap:4px;}
+ .app .section-head,.app .section-head h2,.app .section-head .weather-chip,.app .section-head .heading-hotel{height:auto;min-height:44px;}
+ .app .trip-nav{padding-top:2px;padding-bottom:calc(2px + env(safe-area-inset-bottom,0px));}
+ .app .trip-nav button{min-height:44px;}
+}
+@media(min-width:840px) and (min-height:600px){
+ .app{max-width:1280px;}
+ .app .brand{max-width:none;}
+ .app .day-strip{max-width:560px;}
+ .app[data-view=itinerary]:not([data-day=pre]) .trip-workspace{grid-template-columns:minmax(360px,1.05fr) minmax(340px,1fr);}
+ .app[data-view=itinerary]:not([data-day=pre]) .side-map{display:flex;flex-direction:column;}
+ .app .trip-nav{max-width:560px;}
+}
+@media(min-width:700px) and (max-height:599px){.app{max-width:100%;}}
+@media(max-width:360px){.app .header-sticker{width:28px;} .app .brand-name>.brand-fuji{width:20px;} .app .brand{gap:5px;} .app[data-view] .screen-flow>.summary-card{gap:0 8px;padding:7px 10px;}}
+/* Match the published header's top padding, including its deliberate +28px.
+   Preserve the original 16px external top inset at >=700px, without restoring
+   the old bottom margin or changing the responsive content layout. */
+.app .app-header{padding-top:calc(38px + env(safe-area-inset-top,0px));}
+@media(max-height:650px){.app .app-header{padding-top:calc(36px + env(safe-area-inset-top,0px));}}
+@media(min-width:700px){
+ .app{margin-top:16px;height:calc(100dvh - 16px);}
+ .app .app-header{padding-top:calc(44px + env(safe-area-inset-top,0px));}
+}
+/* Published low-landscape exception takes precedence over the +28px rule. */
+@media(max-height:500px) and (orientation:landscape){.app .app-header{padding-top:calc(8px + env(safe-area-inset-top,0px));}}
+@media print{.side-map,.summary-toggle .summary-affordance{display:none!important;}.summary-panel[hidden]{display:block!important;}}
