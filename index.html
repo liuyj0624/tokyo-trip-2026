@@ -643,7 +643,7 @@ stopCard = function(p,day) {
  <button class="stop-manage" type="button" data-manage-stop="${escapeHTML(String(p.stopIndex))}" aria-label="管理行程：${escapeHTML(p.title)}">編輯行程</button></div></div></article>`;
 };
 const fullSyncBadge=updateSyncBadge;
-updateSyncBadge=function(){fullSyncBadge();const b=$('account-button'),label=b.textContent;b.setAttribute('aria-label',label);b.title=label;if(label==='公開瀏覽 · 登入')b.textContent='登入';else if(label.startsWith('已同步'))b.textContent=cloud.role==='admin'?'管理員':'編輯者';else if(label.length>8)b.textContent=cloud.ready?'帳戶狀態':'連線狀態';};
+updateSyncBadge=function(){fullSyncBadge();const b=$('account-button'),label=b.textContent;b.setAttribute('aria-label',label);b.title=label;if(label==='公開瀏覽 · 登入'){b.textContent='修改';b.setAttribute('aria-label','修改行程（需登入）');b.title='修改行程（需登入）';}else if(label.startsWith('已同步'))b.textContent=cloud.role==='admin'?'管理員':'編輯者';else if(label.length>8)b.textContent=cloud.ready?'帳戶狀態':'連線狀態';};
 function removeSideMap(){cancelAnimationFrame(sideFrame);cancelAnimationFrame(sideResizeFrame);if(sideMap){sideMap.remove();sideMap=null;const canvas=$('side-map-canvas');canvas.textContent='';for(const name of [...canvas.classList])if(name.startsWith('leaflet-'))canvas.classList.remove(name);}sideLayers=null;sideMarkers.clear();sideSignature='';}
 function selectSideStop(id,fromMap=false){
  selectedSideStop=id===null?null:String(id);
